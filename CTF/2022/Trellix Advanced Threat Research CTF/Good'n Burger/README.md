@@ -16,6 +16,9 @@ I used the python library `ntlk` to help me tokenise the sentences in the text f
 
 **FLAG: ATR[The Cat only grinned when it saw Alice.]**
 
+## After Thoughts
+Initially, i realised that `readlines` does not print any output. This is because `readlines` considers a "sentence" ending in `\r\n` and not an actual sentence. A sentence should end in punctuation (other than `,`). Hence i used `ntlk` to read in the text files as sentence. If given more time, i would have tried to use `regex` to sort out the sentences instead.
+
 ## Script
 ```python
 import os
@@ -48,6 +51,3 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
-## After Thoughts
-Initially, i realised that `readlines` does not print any output. This is because `readlines` considers a "sentence" ending in `\r\n` and not an actual sentence. A sentence should end in punctuation (other than `,`). Hence i used `ntlk` to read in the text files as sentence. If given more time, i would have tried to use `regex` to sort out the sentences instead.
